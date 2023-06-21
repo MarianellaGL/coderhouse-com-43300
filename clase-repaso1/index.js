@@ -31,10 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
         characterList.appendChild(characterElement);
 
         const characterImage = characterElement.querySelector("img");
+        const characterName = characterElement.querySelector("p").textContent;
 
         characterImage.addEventListener("click", function () {
-          const characterName = characterElement.querySelector("p").textContent;
-
           modalImage.src = characterImage.src;
           modalName.textContent = characterName;
           modalInfo.textContent = "cargando información....";
@@ -54,9 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
             characterElement.querySelector(".add-to-favorites");
 
           addToFavoritesBtn.addEventListener("click", function () {
-            const characterName =
-              characterElement.querySelector("p").textContent;
-
             const favoriteCharacter = {
               name: characterName,
               image: character.image,
