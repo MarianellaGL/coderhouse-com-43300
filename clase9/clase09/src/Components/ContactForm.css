@@ -1,0 +1,37 @@
+.formContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-49%, -49%);
+}
+
+.MuiBox-root {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+.formValue {
+  margin: 20px;
+}
+
+.button {
+  margin: 10px;
+  width: 20%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
