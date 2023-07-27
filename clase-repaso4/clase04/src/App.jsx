@@ -5,24 +5,33 @@ import Categories from './components/Categories/Categories'
 import ProductList from './components/Products/ProductList'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import CategoryProductList from './components/Categories/CategoryProductList'
+import ContactForm from './components/Forms/ContactForm'
+import { CartProvider } from './context/CartContext'
+import ThemeContextProvider from './context/ThemeContext'
+import withBlackBackground from './hocs/withBlackBackground'
+import { useState } from 'react'
 
 function App() {
+  const [active, setActive] = useState(false)
+
+  const HomeWithBackground = withBlackBackground(Home)
 
   return (
-    <>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/products" element={<ProductList />} />
-          <Route exact path="/categories" element={<Categories />} />
-          <Route exact path="/categories/:categoryId" element={<CategoryProductList />} />
-        </Routes>
+    <ThemeContextProvider>
+      <CartProvider>
+        <Router>
+          <Navbar active={active} setActive={setActive} />
+          <Routes>
+            <Route exact path="/" element={<HomeWithBackground />} />
+            <Route exact path="/products" element={<ProductList />} />
+            <Route exact path="/categories" element={<Categories />} />
+            <Route exact path="/categories/:categoryId" element={<CategoryProductList />} />
+            <Route exact path="/contact" element={<ContactForm />} />
+          </Routes>
+        </Router>
+      </CartProvider>
+    </ThemeContextProvider>
 
-
-
-      </Router>
-    </>
   )
 }
 

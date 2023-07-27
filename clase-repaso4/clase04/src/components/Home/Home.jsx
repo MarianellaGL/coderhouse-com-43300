@@ -3,8 +3,11 @@ import visa from "../../assets/visa.svg"
 import master from '../../assets/master.svg'
 import amex from '../../assets/amex.svg'
 import galicia from '../../assets/galicia.svg'
+import React from "react";
 
-const Home = () => {
+// eslint-disable-next-line react/display-name
+const Home = React.memo((props) => {
+    console.log(props)
     return (<>
         <div className="container">
             <Typography variant="h2" sx={{ color: "#8F8C8C", fontWeight: "lighter" }}>¡Aprovecha nuestros descuentos!</Typography>
@@ -29,5 +32,6 @@ const Home = () => {
         </div>
     </>);
 }
+)
 
 export default Home;
