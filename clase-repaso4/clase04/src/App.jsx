@@ -10,6 +10,7 @@ import { CartProvider } from './context/CartContext'
 import ThemeContextProvider from './context/ThemeContext'
 import withBlackBackground from './hocs/withBlackBackground'
 import { useState } from 'react'
+import CartForm from './components/Forms/CartForm'
 
 function App() {
   const [active, setActive] = useState(false)
@@ -27,6 +28,7 @@ function App() {
             <Route exact path="/categories" element={<Categories />} />
             <Route exact path="/categories/:categoryId" element={<CategoryProductList />} />
             <Route exact path="/contact" element={<ContactForm />} />
+            <Route exact path="/cart" element={<CartForm />} />
           </Routes>
         </Router>
       </CartProvider>

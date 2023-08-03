@@ -21,7 +21,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 //const db = getFirestore(app);
 
 //iterar sobre los datos del mock para que me suba cada objeto a firestore

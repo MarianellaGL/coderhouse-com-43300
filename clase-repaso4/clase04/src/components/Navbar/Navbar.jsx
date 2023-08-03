@@ -39,7 +39,7 @@ const Navbar = ({ active, setActive }) => {
                     </Typography>
                 </NavLink>
                 <div style={{ display: "flex" }}>
-                    <AddShoppingCartIcon sx={{ width: "41px", height: "40px" }} />{cart.length}
+                    <AddShoppingCartIcon sx={{ width: "41px", height: "40px" }} /><Typography component={NavLink} to="/cart">{cart.length}</Typography>
 
                 </div>
             </Toolbar>

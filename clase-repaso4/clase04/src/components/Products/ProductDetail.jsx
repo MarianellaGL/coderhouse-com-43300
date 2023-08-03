@@ -41,11 +41,11 @@ const ProductDetail = ({ product, children }) => {
 
                 </CardContent>
             </Card>
-            {
+            {/*             {
                 isSelected && <ProductInfo open={isSelected} setOpen={setIsSelected}>
                     {children}
                 </ProductInfo>
-            }
+            } */}
         </Grid>
     </>);
 }
