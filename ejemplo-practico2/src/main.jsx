@@ -2,8 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import 'firebase/firestore';
-import dotenv from 'dotenv';
-import products from './mocks/products.json';
 
 
 // Import the functions you need from the SDKs you need
@@ -14,12 +12,12 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 export const firebaseConfig = {
-  apiKey: "AIzaSyDqscxxuWiZWrHu9lxCMUyT74Z7oqtTmAE",
-  authDomain: "ecommerce-coderhouse-43300.firebaseapp.com",
-  projectId: "ecommerce-coderhouse-43300",
-  storageBucket: "ecommerce-coderhouse-43300.appspot.com",
-  messagingSenderId: "35893893726",
-  appId: "1:35893893726:web:f1484975755320195332cf"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.STORAGE,
+  messagingSenderId: import.meta.env.MESSAGE,
+  appId: import.meta.env.APP_ID
 };
 
 export const app = initializeApp(firebaseConfig)

@@ -12,12 +12,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBSb7l_5XujJ9u7DrZOtLIPXdAjh4MOo6Q",
-  authDomain: "ecommerce-zapatopolis.firebaseapp.com",
-  projectId: "ecommerce-zapatopolis",
-  storageBucket: "ecommerce-zapatopolis.appspot.com",
-  messagingSenderId: "97290382655",
-  appId: "1:97290382655:web:697c0416cb282d86edf78a"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE,
+  messagingSenderId: import.meta.env.VITE_MESSAGE_SENDER,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 // Initialize Firebase

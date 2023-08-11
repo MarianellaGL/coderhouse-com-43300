@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import useFirebaseData from "../../Hooks/useFirebaseData";
-import categories from "../../mocks/categories.json";
 import { CircularProgress, Grid, Typography } from "@mui/material";
 import ProductDetail from "../Products/ProductDetail";
 import AddToCartButton from "../Common/AddToCartButton";

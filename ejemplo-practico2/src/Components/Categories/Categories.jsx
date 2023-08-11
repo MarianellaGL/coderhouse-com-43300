@@ -1,5 +1,4 @@
 import { Card, CardContent, CircularProgress, Typography } from "@mui/material";
-import categories from '../../mocks/categories.json';
 import useFirebaseData from "../../Hooks/useFirebaseData";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
